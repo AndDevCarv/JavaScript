@@ -1,5 +1,5 @@
 const pesoQuestao1 = 1;
-const pesoQuestao2 = Number("2.0"); //conversão de string para numero, muito estranho
+const pesoQuestao2 = Number("2.0"); //conversão de string para numero, muito estranho, o JS pega o valor que está dentro da string em tenta fazer a operação matemática, se for possível é true, do contrário é false
 
 console.log(pesoQuestao1);
 console.log(pesoQuestao2);
