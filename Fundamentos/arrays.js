@@ -11,3 +11,4 @@ console.log(valores);
 
 delete valores[0];
 console.log(valores);
+
