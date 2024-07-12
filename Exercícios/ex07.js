@@ -9,6 +9,7 @@ function bhaskara (a, b, c) {
         if (delta < 0 ) {
             console.log("Delta é negativo");
         }
+        
             let x1 = ((-(b) + Math.sqrt(delta)) / (a * 2))
             let x2 = ((-(b) - Math.sqrt(delta)) / (a * 2))
             valores.push(x1)
