@@ -6,6 +6,8 @@ const aumento = function (salario, plano) {
             return salario + ((salario * 20) / 100)
         case 'C':
             return salario + ((salario * 30) / 100)
+        default:
+            return console.log('Plano não cadastrado');
     }
 }
 
