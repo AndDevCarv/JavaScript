@@ -1,22 +1,18 @@
 const calculadora = function calcular(x, y, operacao) {
     
-    switch(calcular) {
-        case operacao = '+':
-            x + y
-            break
-        case operacao = '-':
-            x - y
-            break
-        case operacao = '*':
-            x * y
-            break
-        case operacao = '/':
-            x / y
-            break
+    switch(operacao) {
+        case '+':
+            return x + y
+        case '-':
+            return x - y           
+        case '*':
+            return x * y            
+        case '/':
+            return x / y           
         default:
             console.log('Erro');
             
     }
 }
 
-calculadora(2,3,'*')
+console.log(calculadora(2,3,'*'))
