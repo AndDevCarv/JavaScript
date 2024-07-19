@@ -33,4 +33,4 @@ function contador(valor) {
         nota1
     };
 }
-
+console.log(contador(16032))
