@@ -1,37 +1,24 @@
+let crianca1 = {nome:'Andre', altura:120, crescimento:0.5}
 
-let criancas = 
-[
-    {nome: 'Ana', altura: 1.2, crescimento: 0.2},
-    {nome: 'Joao', altura: 1.4, crescimento: 0.3}
-]
+let crianca2 = {nome:'flavio', altura:110, crescimento:0.8}
 
-function calculaAltura(criancas, anos) {
 
-    for (i = 0; i < criancas.length - 1; i++) {
-        let crianca1 = criancas[i]
-        let crianca2 = criancas[i + 1]
-
-        if (crianca1.altura > crianca2.altura) {
-            console.log(`A crianca ${crianca1.nome} é maior que a crianca ${crianca2.nome}`);
-            if (crianca2.crescimento > crianca1.crescimento) {
-                while (crianca1.altura > crianca2.altura) {
-                    let crianca2 = criancas[i]
-                    crianca2.altura += crianca.crescimento * anos
-                }
-            }
-        } else if (crianca1.altura < crianca2.altura) {
-            console.log(`A crianca ${crianca2.nome} é maior que a crianca ${crianca1.nome}`);
-        } else {
-            console.log('As duas criancas tem a mesma altura');
+function calculaAltura(crianca1, crianca2, anos) {
+    if (crianca1.altura > crianca2.altura) {
+        if (crianca2.crescimento > crianca1.crescimento) {
+            anos = 0
+            while (crianca1.altura > crianca2.altura) {
+                crianca2.altura += crianca2.crescimento * anos
+                anos++
+            } return console.log(`A crianca ${crianca2.nome} irá ultrapassar a ${crianca1.nome} em ${anos} anos`);
+        }else if (crianca2.crescimento < crianca1.crescimento) {
+            anos = 0
+            while (crianca1.altura < crianca2.altura) {
+                crianca1.altura += crianca1.crescimento * anos
+                anos++
+            } return console.log(`A crianca ${crianca1.nome} irá ultrapassar a ${crianca2.nome} em ${anos} anos`);
         }
-
-        let crianca = criancas[i]
-        crianca.altura += crianca.crescimento * anos
-
-        return console.log(`Em ${anos} anos as criancas vão ter: ${crianca1.nome} ${crianca1.altura} e ${crianca2.nome} ${crianca2.altura}`);
     }
-
 }
 
-let resultado = calculaAltura(criancas, 3)
-console.log(resultado);
+calculaAltura(crianca1, crianca2, 5)
