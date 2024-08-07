@@ -6,7 +6,18 @@ const pessoa = {
 
 console.log(Object.keys(pessoa));
 
-console.log(Object.values(pessoa));
+console.log(Object.entries(pessoa));
 
-const arrayObj = Object.entries(pessoa)
-console.log(arrayObj.length)
+
+Object.entries(pessoa).forEach (e => console.log(`${e[1]} : ${e[0]}`))
+
+
+Object.defineProperty(pessoa, 'dataNascimento', {
+    enumerable : true,
+    writable : false,
+    value : '19-09-71'
+})
+
+console.log(Object.entries(pessoa))
+pessoa.dataNascimento = '18-09-68'
+console.log(Object.entries(pessoa));
