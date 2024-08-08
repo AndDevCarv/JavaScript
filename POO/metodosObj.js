@@ -14,7 +14,7 @@ Object.entries(pessoa).forEach (e => console.log(`${e[1]} : ${e[0]}`))
 
 Object.defineProperty(pessoa, 'dataNascimento', {
     enumerable : true,
-    writable : false,
+    writable : true,
     value : '19-09-71'
 })
 
