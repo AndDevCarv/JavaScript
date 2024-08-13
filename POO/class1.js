@@ -14,7 +14,7 @@ class ContaBancaria {
     }
 
     saca(valor) {
-        if (valor > this.saldo){
+        if (valor <= this.saldo){
             this.saldo -= valor
         } else {
             console.log('Saldo insuficiente');
@@ -24,33 +24,47 @@ class ContaBancaria {
     extrato() {
         return console.log(this.saldo)
     }
+
+
 }
-
-const contaAndre = new ContaBancaria('André', 123, 1000)
-
-contaAndre.deposita(100)
-contaAndre.saca(50)
-contaAndre.extrato()
-
 
 class Banco{
     constructor () {
         this.contas = []
     }
 
-    criaConta(numConta, titular, saldo = 0) {
-        const novaConta = new ContaBancaria(numConta, titular, saldo)
+    criaConta(titular, numConta,saldo) {
+        const novaConta = new ContaBancaria(titular, numConta, saldo)
         this.contas.push(novaConta)
         console.log(`Conta numero ${numConta} de titularidade ${titular} e saldo ${saldo} criada`);
         return novaConta
     }
 
     obterConta(numConta) {
-        return this.contas[numConta]
+        return this.contas.find(conta=> conta.numConta === numConta )
     }
+
+    transferencia(valor, numContaOrigem, numContaDestino) {
+        const contaOrigem = this.obterConta(numContaOrigem);
+        const contaDestino = this.obterConta(numContaDestino);
+        
+        if (contaOrigem && contaDestino) {
+            if (contaOrigem.saldo >= valor) {
+                contaOrigem.saca(valor);
+                contaDestino.deposita(valor);
+                console.log(`Transferência de R$${valor} realizada de ${contaOrigem.titular} (Conta: ${numContaOrigem}) para ${contaDestino.titular} (Conta: ${numContaDestino}).`);
+            } else {
+                console.log('Saldo insuficiente para a transferência.');
+            }
+        } else {
+            console.log('Conta de origem ou destino não encontrada.');
+        }
+    } 
 }
 
-const banco = new Banco
+const banco = new Banco()
 
-const conta1 = banco.criaConta(123, 'Andre', 100)
-conta1.extrato
+const conta1 = banco.criaConta('andre', 123, 1999)
+const conta2 = banco.criaConta('roger', 32, 10000)
+
+banco.transferencia(10, 123, 32)
