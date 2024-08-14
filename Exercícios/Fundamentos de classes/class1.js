@@ -67,4 +67,4 @@ const banco = new Banco()
 const conta1 = banco.criaConta('andre', 123, 1999)
 const conta2 = banco.criaConta('roger', 32, 10000)
 
-banco.transferencia(10, 123, 32)
+console.log(banco.obterConta(123))
