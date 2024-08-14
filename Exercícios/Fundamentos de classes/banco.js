@@ -2,27 +2,27 @@ class ContaBancaria {
     constructor(titular, numConta, saldo) {
         this.titular = titular,
         this.numConta = numConta,
-        this.saldo = saldo
+        this._saldo = saldo
     }
 
     deposita(valor) {
         if (valor > 0){
-            this.saldo += valor
+            this._saldo += valor
         } else {
             console.log('O valor precisa ser positivo');   
         }
     }
 
-    saca(valor) {
-        if (valor <= this.saldo){
-            this.saldo -= valor
+    set saca(valor) {
+        if (valor <= this._saldo){
+            this._saldo -= valor
         } else {
             console.log('Saldo insuficiente');
         }
     }
 
-    extrato() {
-        return console.log(this.saldo)
+    get extrato() {
+        return console.log(this._saldo)
     }
 
 
@@ -67,4 +67,5 @@ const banco = new Banco()
 const conta1 = banco.criaConta('andre', 123, 1999)
 const conta2 = banco.criaConta('roger', 32, 10000)
 
-console.log(banco.obterConta(123))
+conta1.saca = 999
+conta1.extrato
