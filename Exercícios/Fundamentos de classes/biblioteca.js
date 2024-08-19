@@ -48,7 +48,14 @@ class Biblioteca {
         
     }
 
-    removeLivro(array, livro){
-        const index = array.findIndex(livro => livro.titulo === titulo)
+    removeLivro(livroDel){
+        const index = this.livros.findIndex(livro => livro.titulo === livroDel)
+        this.livros.splice(index, 1)
+    }
+
+    listarLivros() {
+        for (i = 0; this.livros.length > i; i++) {
+            console.log(this.livros[i]);
+        }
     }
 }
