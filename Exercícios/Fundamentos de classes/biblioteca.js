@@ -15,7 +15,7 @@ class Livro {
     }
   
     devolver() {
-        if (this.disponivel = true) {
+        if (this.disponivel == true) {
             console.log(`O livro ${this.titulo} ja está disponivel`);
         } else {
             console.log(`Livro ${this.titulo} devolvido`);
@@ -24,7 +24,7 @@ class Livro {
     }
 
     disponibilidade() {
-        if (this.disponivel = true) {
+        if (this.disponivel == true) {
             console.log('está disponivel');
         } else {
             console.log('não está disponivel');
@@ -42,16 +42,16 @@ class Biblioteca {
     }
 
     emprestaLivro(livroEmp) {
-        const livroBusca = this.livros.find(livro => livro.titulo = livroEmp)
+        const livroBusca = this.livros.find(livro => livro.titulo == livroEmp)
         if (livroBusca) {
-            livroBusca.emprestaLivro()
+            livroBusca.emprestar()
         } else {
             console.log(`O livro ${livroEmp} não está disponivel`);
         }
     }
 
     devolveLivro (livroDev) {
-        const livroDevolucao = this.livros.find (livro => livro.titulo = livroDev)
+        const livroDevolucao = this.livros.find (livro => livro.titulo == livroDev)
         if (livroDevolucao) {
             livroDevolucao.devolver()
         } else {
@@ -81,7 +81,6 @@ class Biblioteca {
 const bibliotecaa = new Biblioteca()
 
 const livro1 = bibliotecaa.adicionaLivro('Algoritmos', 'Andre', 2020)
-bibliotecaa.emprestaLivro(livro1)
+bibliotecaa.emprestaLivro('Algoritmos')
 const livro2 = bibliotecaa.adicionaLivro('Padroes', 'Raul', 2021)
-bibliotecaa.removeLivro(livro1)
 bibliotecaa.listarLivros()
