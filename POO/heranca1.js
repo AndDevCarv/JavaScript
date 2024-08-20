@@ -1,4 +1,4 @@
-//em tese, todo objeto quando procura alguma variavel detnro de uma função, se ela não existir dentro do escopo da função ele vai ir para o
+//em tese, todo objeto quando procura alguma variavel dentro de uma função, se ela não existir dentro do escopo da função ele vai ir para o
 //objeto pai e procurar e assim por diante, todo objeto aponta para um prototype
 
 const ferrari = {
