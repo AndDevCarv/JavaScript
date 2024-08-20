@@ -24,11 +24,7 @@ class Livro {
     }
 
     disponibilidade() {
-        if (this.disponivel == true) {
-            console.log('está disponivel');
-        } else {
-            console.log('não está disponivel');
-        }
+        return this.disponivel ? 'Está disponivel' : 'Não está disponivel'
     }
 
     informacoes() {
@@ -63,7 +59,7 @@ class Biblioteca {
         const novoLivro = new Livro(titulo, autor, anoPublicacao)
         this.livros.push(novoLivro)
         console.log(`Livro ${titulo} adicionado na biblioteca`);
-        
+        return novoLivro;
     }
 
     removeLivro(livroDel){
@@ -83,4 +79,5 @@ const bibliotecaa = new Biblioteca()
 const livro1 = bibliotecaa.adicionaLivro('Algoritmos', 'Andre', 2020)
 bibliotecaa.emprestaLivro('Algoritmos')
 const livro2 = bibliotecaa.adicionaLivro('Padroes', 'Raul', 2021)
+livro2.informacoes()
 bibliotecaa.listarLivros()
