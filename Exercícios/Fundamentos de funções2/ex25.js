@@ -1,8 +1,7 @@
+const frutas = ["maçã", "banana", "laranja"];
 
-function buscaPalavra (trecho, arr) {
-    arr.forEach(palavra => {
-        palavra.split('').forEach(letra => {
-            
-        })
-    });
-}
+const resultado = frutas.filter(palavra => {
+    return palavra.includes('ç')
+})
+
+console.log(resultado);
