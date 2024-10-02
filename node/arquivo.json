@@ -1,0 +1,9 @@
+{
+    "db": {
+        "host": "chupacu de goianinha",
+        "port": 5456,
+        "user": "andre",
+        "password": "andre",
+        "database": "databank"
+    }
+}
