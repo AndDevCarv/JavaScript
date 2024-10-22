@@ -14,3 +14,16 @@ p {
 .white-text {
   padding: 10px;
 }
+
+#outer-box {
+  border: 10px solid purple;
+}
+
+#uaite {
+  background-color: red;
+  color: aliceblue;
+}
+
+#ielo {
+  color: yellow;
+}
