@@ -1,0 +1,12 @@
+/* Write your code here: */
+h1, h2 {
+    color: blueviolet;
+}
+
+.box > .done {
+    color: firebrick;
+}
+
+.box .list {
+    color: rgb(32, 10, 226);
+}
