@@ -1,0 +1,23 @@
+.flag {
+    background-color: rgb(213, 5, 5);
+    height: 600px;
+    width: 900px;
+}
+
+.blue {
+    background-color: rgb(11, 11, 109);
+    height: 300px;
+    width: 900px;
+    position: absolute;
+    top: 150px;
+}
+
+.circle {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 40%;
+}
