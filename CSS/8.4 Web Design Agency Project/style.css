@@ -6,32 +6,28 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
-.main {
-  flex: 1;
+
+.we {
+  font-size: 360%;
+  max-width: 600px;
+}
+
+.highlight {
+  color: rgb(50, 11, 102);
+}
+
+.content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px 200px 200px;
-  gap: 200px;
-}
-
-h1 {
-  font-size: 5rem;
-}
-
-footer {
-  text-align: right;
-  color: midnightblue;
-}
-
-.right > img{
-  float: left;
-}
-.left > img{
-  float: left;
+  gap: 15px;
 }
 
 .tile-image {
-  max-width: 50%; 
-  height: auto;
-  margin-right: 40px;
+  float: left;
+  height: 200px;
+  margin: 35px;
+}
+
+footer {
+  margin-top: 10%;
 }
