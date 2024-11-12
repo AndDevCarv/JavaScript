@@ -1,0 +1,16 @@
+body{
+    font-family: "Sono", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+.pricing-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    gap: 20%;
+}
