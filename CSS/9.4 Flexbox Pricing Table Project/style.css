@@ -1,4 +1,65 @@
-body{
+@media (min-width: 1100px) {
+  body{
+      font-family: "Sono", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+  .pricing-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    gap: 25px;
+      
+  }
+
+  .plan-title {
+  font-weight: 800;
+  font-size: 20px;
+  }
+
+  .plan-price {
+    font-weight: 800;
+    font-size: 35px;
+  }
+
+  .pricing-plan {
+    text-align: center;
+    background-color: rgb(228, 226, 226);
+    border-radius: 4px;
+    padding: 20px;
+    width: 330px;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 5px;
+  }
+
+  .plan-button {
+    background-color: rgb(254, 113, 12);
+    font-weight: 600;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .plan-button:hover {
+    background-color: orangered;
+  }
+}
+@media (max-width: 1099px) {
+  body{
     font-family: "Sono", sans-serif;
     display: flex;
     justify-content: center;
@@ -9,8 +70,51 @@ body{
 
 .pricing-container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
-    gap: 20%;
+    flex-direction: column;
+    
+    gap: 25px;
+    
+}
+
+.plan-title {
+ font-weight: 800;
+ font-size: 20px;
+}
+
+.plan-price {
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.pricing-plan {
+  text-align: center;
+  background-color: rgb(228, 226, 226);
+  border-radius: 4px;
+  padding: 20px;
+  width: 330px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+}
+
+.plan-button {
+  background-color: rgb(254, 113, 12);
+  font-weight: 600;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.plan-button:hover {
+  background-color: orangered;
+}
 }
