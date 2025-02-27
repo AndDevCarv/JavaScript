@@ -3,6 +3,12 @@ body {
     color: #F0F0F0 !important;
 }
 
+.heading {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .container-profile-img {
     display: flex;
     align-items: center;
@@ -17,4 +23,16 @@ body {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 30px;
+}
+
+.content {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-bottom: 17%;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 1.7em;
 }
