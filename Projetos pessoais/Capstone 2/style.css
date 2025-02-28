@@ -29,10 +29,36 @@ body {
     font-family: "IBM Plex Mono", serif;
     font-weight: 300;
     font-style: normal;
-    padding-bottom: 17%;
+    padding-bottom: 12%;
 }
 
 .subtitle {
     font-weight: 400;
     font-size: 1.7em;
 }
+
+.projects {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-bottom: 8%;
+}
+
+.project-title {
+    padding-bottom: 1em;
+}
+
+.button-project a {
+    text-decoration: none;
+    color: #F0F0F0;
+    transition: 0.5s ;
+}
+
+.button-project a:hover {
+    color: #B0B0B0;
+}
+
