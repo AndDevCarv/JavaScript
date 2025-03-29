@@ -1,0 +1,11 @@
+h1 {
+  color: red;
+}
+
+button:active {
+  color: brown;
+}
+
+.huge {
+  font-size: 10rem;
+}
