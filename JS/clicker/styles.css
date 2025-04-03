@@ -40,6 +40,13 @@ button {
     font-size: 35px;
     border-radius: 5px;
     margin: 15px;
+    transition: background 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+    color: #EEEEEE;
 }
 
 .buttons {
