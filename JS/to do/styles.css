@@ -11,7 +11,7 @@ body {
     justify-content: center;
 }
 
-#addTask, #inputTask {
+#addTask, #inputTask, .deleteBtn {
     all: unset;    
 }
 
@@ -42,12 +42,13 @@ h1 {
     font-style: normal;
 }
 
-#addTask {
+#addTask, .deleteBtn {
     cursor: pointer;
     transition: color 0.2s ease;
 }
 #addTask:hover {
     color: rgb(92, 101, 101);
+
 }
 
 #inputTask {
@@ -67,4 +68,15 @@ h1 {
     align-items: left;
     justify-content: center;
 
+}
+
+.deleteBtn {
+    padding-left: 40px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.deleteBtn:hover {
+    color: brown;
 }
