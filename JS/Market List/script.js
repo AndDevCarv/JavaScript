@@ -24,17 +24,10 @@ function createItem(item) {
     const li = document.createElement("li");
     li.textContent = `${item.nome} - ${item.quantidade}`;
 
-    const button = document.createElement("button");
-    button.textContent = "Comprado";
-    button.className = "buyButton";
-
-    button.addEventListener("click", function () {
-        li.remove();
-        const purchasedList = document.querySelector("#purchased");
-        purchasedList.appendChild(li);
-    });
+    const button = addButtonPurchased(li);
 
     li.appendChild(button);
+    
     return li;
 }
 
@@ -53,6 +46,24 @@ function loadSavedItem() {
         document.getElementById("needToBuy").appendChild(li);
     });
 }
+
+function addButtonPurchased(li) {
+    const buttonPuchased = document.createElement("button");
+    buttonPuchased.textContent = "Comprado";
+    buttonPuchased.className = "buyButton";
+
+    buttonPuchased.addEventListener("click", function() {
+        li.remove();
+        li.removeChild(buttonPuchased);
+        const purchasedList = document.querySelector("#purchased");
+        purchasedList.appendChild(li);
+        
+    })
+
+    return buttonPuchased;
+}
+
+
 
 document.getElementById("addButton").addEventListener("click", addItem);
 loadSavedItem();
