@@ -24,9 +24,11 @@ function createItem(item) {
     const li = document.createElement("li");
     li.textContent = `${item.nome} - ${item.quantidade}`; //cria o esqueleto
 
-    const button = addButtonPurchased(li); //adicina o botao
+    const buttonAdd = addButtonPurchased(li); //adicina o botao
+    const buttonRemove = addButtonRemove(li);
 
-    li.appendChild(button);
+    li.appendChild(buttonAdd);
+    li.appendChild(buttonRemove);
     
     return li;
 }
@@ -39,6 +41,10 @@ function localStorageSave(item) {
 }
 
 function loadSavedItem() {
+
+    document.getElementById("needToBuy").innerHTML = "";
+    document.getElementById("purchased").innerHTML = "";
+
     let item = JSON.parse(localStorage.getItem("item")) || [];
 
     item.forEach(item => {
@@ -72,19 +78,25 @@ function updateLocalStorage(updatedItem) {
 }
 
 function localStorageRemove(li) {
-    let savedItems = JSON.parse(localStorage.getItem("item")) || [];
-    savedItems = savedItems.filter(item => item != li);
-    localStorage.setItem("item", JSON.stringify(savedItems));
+    const [nome, quantidade] = li.textContent.split("-").map(t => t.trim());
+    let savedItem = JSON.parse(localStorage.getItem("item")) || [];
+
+    savedItem = savedItem.filter(item => {
+        return !(item.nome == nome && item.quantidade == quantidade);
+    })
+
+    localStorage.setItem("item", JSON.stringify(savedItem));
 }
 
 function addButtonRemove (li) {
     const buttonRemove = document.createElement("button");
-    buttonRemove.textContent = "button";
+    buttonRemove.textContent = "Remover";
     buttonRemove.className = "buttonRemove";
 
     buttonRemove.addEventListener("click", function() {
         li.remove();
         localStorageRemove(li);
+        loadSavedItem();
     })
 
     return buttonRemove;
@@ -96,11 +108,10 @@ function addButtonPurchased(li) {
     buttonPuchased.className = "buyButton"; //vai criar o elemento
 
     buttonPuchased.addEventListener("click", function() {
-        li.remove(); //quando clicado vai remover o li do html
-        li.removeChild(buttonPuchased); //vai remover o comprado
-        updateLocalStorage({
-            nome: li.textContent.split("-")[0], quantidade: li.textContent.split("-")[1]
-        })
+        const [nome, quantidade] = li.textContent.split("-").map(t => t.trim());
+
+        li.remove()
+        updateLocalStorage({nome, quantidade});
         
     })
 
