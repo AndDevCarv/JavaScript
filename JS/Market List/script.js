@@ -53,23 +53,6 @@ function loadSavedItem() {
     });
 }
 
-function addButtonPurchased(li) {
-    const buttonPuchased = document.createElement("button");
-    buttonPuchased.textContent = "Comprado";
-    buttonPuchased.className = "buyButton"; //vai criar o elemento
-
-    buttonPuchased.addEventListener("click", function() {
-        li.remove(); //quando clicado vai remover o li do html
-        li.removeChild(buttonPuchased); //vai remover o comprado
-        updateLocalStorage({
-            nome: li.textContent.split("-")[0], quantidade: li.textContent.split("-")[1]
-        })
-        
-    })
-
-    return buttonPuchased;
-}
-
 function updateLocalStorage(updatedItem) {
     let items = JSON.parse(localStorage.getItem("item")) || []
 
@@ -87,6 +70,43 @@ function updateLocalStorage(updatedItem) {
     localStorage.setItem("item", JSON.stringify(items));
     loadSavedItem();
 }
+
+function localStorageRemove(li) {
+    let savedItems = JSON.parse(localStorage.getItem("item")) || [];
+    savedItems = savedItems.filter(item => item != li);
+    localStorage.setItem("item", JSON.stringify(savedItems));
+}
+
+function addButtonRemove (li) {
+    const buttonRemove = document.createElement("button");
+    buttonRemove.textContent = "button";
+    buttonRemove.className = "buttonRemove";
+
+    buttonRemove.addEventListener("click", function() {
+        li.remove();
+        localStorageRemove(li);
+    })
+
+    return buttonRemove;
+}
+
+function addButtonPurchased(li) {
+    const buttonPuchased = document.createElement("button");
+    buttonPuchased.textContent = "Comprado";
+    buttonPuchased.className = "buyButton"; //vai criar o elemento
+
+    buttonPuchased.addEventListener("click", function() {
+        li.remove(); //quando clicado vai remover o li do html
+        li.removeChild(buttonPuchased); //vai remover o comprado
+        updateLocalStorage({
+            nome: li.textContent.split("-")[0], quantidade: li.textContent.split("-")[1]
+        })
+        
+    })
+
+    return buttonPuchased;
+}
+
 
 
 document.getElementById("addButton").addEventListener("click", addItem);
