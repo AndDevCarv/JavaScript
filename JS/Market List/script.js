@@ -23,12 +23,14 @@ function addItem () {
 function createItem(item) {
     const li = document.createElement("li");
     li.textContent = `${item.nome} - ${item.quantidade}`; //cria o esqueleto
+    li.dataset.nome = item.nome;
+    li.dataset.quantidade = item.quantidade;
 
-    const buttonAdd = addButtonPurchased(li); //adicina o botao
+    const buttonAdd = addButtonPurchased(li); //adiciona o botao
     const buttonRemove = addButtonRemove(li);
 
-    li.appendChild(buttonAdd);
-    li.appendChild(buttonRemove);
+    li.appendChild(buttonAdd);//adiciona o botao
+    li.appendChild(buttonRemove);//adiciona o botao
     
     return li;
 }
@@ -42,50 +44,50 @@ function localStorageSave(item) {
 
 function loadSavedItem() {
 
-    document.getElementById("needToBuy").innerHTML = "";
+    document.getElementById("needToBuy").innerHTML = ""; //limpa o html antes de buscar os dados novos no banco
     document.getElementById("purchased").innerHTML = "";
 
-    let item = JSON.parse(localStorage.getItem("item")) || [];
+    let item = JSON.parse(localStorage.getItem("item")) || []; //tira da gaveta
 
     item.forEach(item => {
         const li = createItem(item);
 
         if (item.comprado) {
-            document.getElementById("purchased").appendChild(li);
+            document.getElementById("purchased").appendChild(li); //se o item tiver true ele vai ir pra lista de comprado
             li.removeChild(li.querySelector(".buyButton"))
         } else {
-            document.getElementById("needToBuy").appendChild(li)
+            document.getElementById("needToBuy").appendChild(li) //se nao, vai pra lista de compras
         }
     });
 }
 
 function updateLocalStorage(updatedItem) {
-    let items = JSON.parse(localStorage.getItem("item")) || []
+    let items = JSON.parse(localStorage.getItem("item")) || [] //tira da gaveta
 
     items = items.map(item => {
         if (
-            item.nome.trim() === updatedItem.nome.trim() &&
-            item.quantidade.trim() === updatedItem.quantidade.trim()
+            item.nome === updatedItem.nome && //se o item bater com o item que estamos procurando
+            item.quantidade === updatedItem.quantidade
         ) {
-            return {...item, comprado: true}
+            return {...item, comprado: true} //ele vai atualizar pra true, ou seja, comprado
         }
 
-        return item
+        return item //retorna o item modificado
     });
 
-    localStorage.setItem("item", JSON.stringify(items));
-    loadSavedItem();
+    localStorage.setItem("item", JSON.stringify(items)); //coloca na gaveta
+    loadSavedItem(); //recarrega o DOM
 }
 
 function localStorageRemove(li) {
-    const [nome, quantidade] = li.textContent.split("-").map(t => t.trim());
     let savedItem = JSON.parse(localStorage.getItem("item")) || [];
-
     savedItem = savedItem.filter(item => {
-        return !(item.nome == nome && item.quantidade == quantidade);
+        return !(item.nome == li.dataset.nome && item.quantidade == li.dataset.quantidade);
     })
 
     localStorage.setItem("item", JSON.stringify(savedItem));
+
+    loadSavedItem();
 }
 
 function addButtonRemove (li) {
@@ -96,7 +98,6 @@ function addButtonRemove (li) {
     buttonRemove.addEventListener("click", function() {
         li.remove();
         localStorageRemove(li);
-        loadSavedItem();
     })
 
     return buttonRemove;
@@ -108,9 +109,10 @@ function addButtonPurchased(li) {
     buttonPuchased.className = "buyButton"; //vai criar o elemento
 
     buttonPuchased.addEventListener("click", function() {
-        const [nome, quantidade] = li.textContent.split("-").map(t => t.trim());
+        const nome = li.dataset.nome;
+        const quantidade = li.dataset.quantidade;
 
-        li.remove()
+        li.removeChild(buttonPuchased);
         updateLocalStorage({nome, quantidade});
         
     })
