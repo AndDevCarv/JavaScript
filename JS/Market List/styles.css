@@ -1,4 +1,36 @@
-.comprado {
-    text-decoration: line-through;
-    color: #e60a0a;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/*
+BF9264 marrom escuro
+6F826A verde de fundo
+BBD8A3 verde fraco
+F0F1C5 bege letras
+*/
+
+
+body {
+    background-color: #6F826A;
+    color: #F0F1C5;
+
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#addButton, .buyButton, .buttonRemove, #inputItem, #inputNum {
+    all: unset;
+}
+
+
+#addButton {
+    
+    
+}
+
+#buyButton {
+
+}
+
+#buttonRemove {
+
 }
