@@ -10,27 +10,70 @@ F0F1C5 bege letras
 body {
     background-color: #6F826A;
     color: #F0F1C5;
-
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
+
 }
 
 #addButton, .buyButton, .buttonRemove, #inputItem, #inputNum {
     all: unset;
 }
 
+.addItems {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+#inputItem {
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    font-weight: 250;
+}
+
+#inputNum {
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    font-weight: 250;
+}
+
+::placeholder {
+    color: rgb(53, 49, 49);
+    opacity: 1;
+}
 
 #addButton {
-    
+    background-color: #BBD8A3;
+    color: black;
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 5px;
     
 }
 
-#buyButton {
+#addButton:hover {
+    background-color: #BF9264;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#needToBuy {
+    background-color: #BF9264;
+    display: flex;
+    margin: 10px;
 
 }
 
-#buttonRemove {
+.buyButton {
+    all: unset;
+    padding: 5px 10px;
+}
 
+.buttonRemove {
+    all: unset;
+    padding: 5px 10px;
 }
