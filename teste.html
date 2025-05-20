@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Display e Position</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .block-box {
+      background: teal;
+      display: block;
+    }
+
+    .inline-box {
+      background: orange;
+      display: inline;
+    }
+
+    .none-box {
+      background: red;
+      display: none; /* não será exibido */
+    }
+
+    .relative-box {
+      background: green;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-box {
+      background: purple;
+      position: absolute;
+      top: 50px;
+      left: 200px;
+    }
+
+    .hidden-box {
+      background: gray;
+      visibility: hidden; /* ocupa espaço mas não aparece */
+    }
+
+    .container {
+      position: relative; /* necessário para o absolute funcionar dentro */
+      height: 200px;
+      border: 2px dashed #ccc;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Teste de CSS</h1>
+
+  <div class="block-box box">display: block</div>
+
+  <div class="inline-box box">display: inline</div>
+
+  <div class="none-box box">display: none</div>
+
+  <div class="relative-box box">position: relative</div>
+
+  <div class="container">
+    <div class="absolute-box box">position: absolute</div>
+  </div>
+
+  <div class="hidden-box box">visibility: hidden</div>
+
+</body>
+</html>
