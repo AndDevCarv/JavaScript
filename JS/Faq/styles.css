@@ -1,0 +1,7 @@
+.faqContent {
+    display: none;
+}
+
+.faqContent.show {
+    display: block;
+}
