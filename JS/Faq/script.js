@@ -4,8 +4,22 @@ faqButtons.forEach(button => { //foreach que vai percorrer todos os itens dessa 
     button.addEventListener("click", function() {
         const postIt = button.nextElementSibling; //quando clicar no BOTAO, ele vai pegar o proximo elemento, nesse caso o paragrafo
         postIt.classList.toggle("show") //após pegar o parágrafo ele aciona a classe .show, se ela ja estiver acionada ele desativa
+        
+        const backColor = button.parentElement;
+        backColor.classList.toggle("back")
+    
     })
 });
+
+
+
+
+
+
+
+
+
+
 
 /*resumo que a ia mandou:
 Quando usar cada um?
