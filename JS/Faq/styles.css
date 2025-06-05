@@ -30,6 +30,7 @@
 
 .faqItem:hover {
     background-color: aquamarine;
+    transition: 0.5s;
 }
 
 .faqItem.back {
