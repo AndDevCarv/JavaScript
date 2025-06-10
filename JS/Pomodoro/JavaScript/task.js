@@ -1,6 +1,7 @@
-const inputTask = document.getElementById("inputTask");
-const taskList = document.getElementById("taskList");
+const inputTask = document.getElementById("inputTask"); 
+const taskList = document.getElementById("taskList"); //as 3 const capturam o id pra manipulacao
 const inputBtn = document.getElementById("inputBtn");
+
 
 
 function createElementTask(task) {
@@ -13,21 +14,45 @@ function createElementTask(task) {
 
     deleteBtn.addEventListener("click", function() {
         li.remove()
+        save();
     })
 
+    li.appendChild(deleteBtn);
     return li;
 }
 
-function addTask() {
-    const inputTask = document.getElementById("inputTask");
-    if (inputTask.value.trim() == "") return;
 
-    let add;
-    add.textContent = inputTask.value;
-    createElementTask(add);
+
+function addTask() {
+    const form = inputTask.value.trim();
+    if (form === "") return;
     
-    const taskList = document.getElementById("taskList");
-    taskList.appendChild(add);
+    let task = createElementTask(form);
+    taskList.appendChild(task);
+
+    save();
+    inputTask.value = "";
 }
 
+function save() {
+    let taskArr = [];
+    document.querySelectorAll("#taskList li").forEach(task => {
+        taskArr.push(task.firstChild.textContent.trim());
+    });
+
+    localStorage.setItem("task", JSON.stringify(taskArr));
+}
+
+function loadSavedTasks() {
+    const localSaved = JSON.parse(localStorage.getItem("task")) || [];
+    localSaved.forEach(task => {
+        const taskCreated = createElementTask(task);
+        taskList.appendChild(taskCreated);
+    });
+}
+
+
+
+
+window.addEventListener("load", loadSavedTasks);
 inputBtn.addEventListener("click", addTask);
