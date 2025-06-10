@@ -4,17 +4,17 @@ const inputBtn = document.getElementById("inputBtn");
 
 
 
-function createElementTask(task) {
+function createElementTask(task) { //function pra estruturar o elemento dentro do UL
     const li = document.createElement("li");
-    li.textContent = task;
+    li.textContent = task; //vai criar o elemento
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
-    deleteBtn.className = "deleteBtn"
+    deleteBtn.className = "deleteBtn"; //na criacao já adiciona o botao de Delete
 
     deleteBtn.addEventListener("click", function() {
-        li.remove()
-        save();
+        li.remove() //no click ele remove do DOM
+        save(); //e salva pra dar o resfresh limpo
     })
 
     li.appendChild(deleteBtn);
@@ -24,29 +24,29 @@ function createElementTask(task) {
 
 
 function addTask() {
-    const form = inputTask.value.trim();
-    if (form === "") return;
+    const form = inputTask.value.trim(); //vai pegar o elemento, ir até o texto (value) e retirar espacos
+    if (form === "") return; //se o elemento for vazio retorna
     
     let task = createElementTask(form);
-    taskList.appendChild(task);
+    taskList.appendChild(task); //vai criar o elemento e já dar o append no UL
 
     save();
-    inputTask.value = "";
+    inputTask.value = ""; //salva e reseta o placeholder do input
 }
 
 function save() {
     let taskArr = [];
-    document.querySelectorAll("#taskList li").forEach(task => {
-        taskArr.push(task.firstChild.textContent.trim());
+    document.querySelectorAll("#taskList li").forEach(task => { //como a const da tasklist estava no começo estava bugando por estar no inicio do codigo, dai é acessado o elemento aqui
+        taskArr.push(task.firstChild.textContent.trim()); //o for each percorre cada li, pega só o texto (first child) e formata com o trim, depois da um push no arr
     });
 
-    localStorage.setItem("task", JSON.stringify(taskArr));
+    localStorage.setItem("task", JSON.stringify(taskArr)); //aqui ele pega o local storage, dá um identificado e passa pelo json pra armazenar
 }
 
 function loadSavedTasks() {
-    const localSaved = JSON.parse(localStorage.getItem("task")) || [];
+    const localSaved = JSON.parse(localStorage.getItem("task")) || []; //aqui ele vai buscar pela identificacao e retornar como arr
     localSaved.forEach(task => {
-        const taskCreated = createElementTask(task);
+        const taskCreated = createElementTask(task); //pra cada li dentro dele ele vai novamente criar os elementos no html
         taskList.appendChild(taskCreated);
     });
 }
@@ -54,5 +54,5 @@ function loadSavedTasks() {
 
 
 
-window.addEventListener("load", loadSavedTasks);
-inputBtn.addEventListener("click", addTask);
+window.addEventListener("load", loadSavedTasks); //quando damos refresh ele recarrega as task
+inputBtn.addEventListener("click", addTask); //action do addbtn
