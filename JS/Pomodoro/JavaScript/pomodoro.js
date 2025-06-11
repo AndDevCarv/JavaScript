@@ -47,7 +47,19 @@ function breakBtn() {
     secondElement.textContent = String(second).padStart(2, "0");
 }
 
+
+function colorChangeBreak() {
+    document.body.style.backgroundColor = "#839B97"
+}
+
+function colorChangeFocus() {
+    document.body.style.backgroundColor = "#34626C"
+}
+
+
 startButton.addEventListener("click", start);
 focusButton.addEventListener("click", focusBtn);
+focusButton.addEventListener("click", colorChangeFocus);
 pauseButton.addEventListener("click", pause);
 breakButton.addEventListener("click", breakBtn);
+breakButton.addEventListener("click", colorChangeBreak);
