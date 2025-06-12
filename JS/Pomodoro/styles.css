@@ -4,7 +4,8 @@ body {
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-
+  transition: background-color 1s ease-in-out;
+  background-color: #34626C;
   font-style: normal;
 }
 
@@ -12,3 +13,33 @@ body {
     all: unset;
 }
 
+.countDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.chrono {
+  margin-top: 40px;
+  font-size: 70px;
+}
+
+#buttons {
+  display: flex ;
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#start, #pause, #break, #focus {
+  padding: 5px;
+  border-color: transparent;
+  border-radius: 5px;
+  border-style: solid
+}
+
+#start:hover, #pause:hover, #break:hover, #focus:hover {
+  border-color: aliceblue;
+  transition: 0.5s ease-in-out;
+}
