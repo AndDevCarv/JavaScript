@@ -32,6 +32,31 @@ body {
   margin: 10px;
 }
 
+.toDo {
+  border-color: aliceblue;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+}
+
+.inputList {
+  display: flex;
+}
+
+#taskList {
+  margin: 20px;
+}
+
+#inputBtn {
+  cursor: pointer;
+}
+
 #start, #pause, #break, #focus {
   padding: 5px;
   border-color: transparent;
@@ -39,7 +64,12 @@ body {
   border-style: solid
 }
 
+#inputBtn:hover {
+  color: aliceblue;
+  transition: 0.1s ease-in-out;
+}
+
 #start:hover, #pause:hover, #break:hover, #focus:hover {
   border-color: aliceblue;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease;
 }
