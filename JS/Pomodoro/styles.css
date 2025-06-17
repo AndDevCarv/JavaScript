@@ -41,20 +41,40 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   margin: auto;
 }
 
 .inputList {
   display: flex;
+  gap: 10px;
 }
 
 #taskList {
+  gap: 5px;
   margin: 20px;
 }
 
-#inputBtn {
-  cursor: pointer;
+#taskList li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 5px 10px;
+  text-align: center;
+
+}
+
+
+#inputTask {
+  background-color: #6d8d94;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#inputTask::placeholder {
+  color: rgb(52, 52, 52);
+  font-style: italic;
 }
 
 #start, #pause, #break, #focus {
@@ -64,8 +84,9 @@ body {
   border-style: solid
 }
 
-#inputBtn:hover {
+#inputBtn:hover, .deleteBtn:hover {
   color: aliceblue;
+  cursor: pointer;
   transition: 0.1s ease-in-out;
 }
 

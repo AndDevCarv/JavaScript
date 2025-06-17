@@ -9,7 +9,7 @@ function createElementTask(task) { //function pra estruturar o elemento dentro d
     li.textContent = task; //vai criar o elemento
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "X";
+    deleteBtn.textContent = "x";
     deleteBtn.className = "deleteBtn"; //na criacao já adiciona o botao de Delete
 
     deleteBtn.addEventListener("click", function() {
