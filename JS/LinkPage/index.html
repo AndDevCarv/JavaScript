@@ -7,30 +7,31 @@
 </head>
 <body>
     <div>
-        <select name="" id="select-os">
-            <option value="">windows 11</option>
-            <option value="">windows 10 (64 bits)</option>
-            <option value="">windows 10 (32 bits)</option>
-            <option value="">windows 8.1 (64 bits)</option>
-            <option value="">windows 8.1 (32 bits)</option>
-            <option value="">windows 8 (64 bits)</option>
-            <option value="">windows 8 (32 bits)</option>
-            <option value="">windows 7 (64 bits)</option>
-            <option value="">windows 7 (32 bits)</option>
+        <select id="select-os">
+            <option value="windows11">windows 11</option>
+            <option value="windows1032">windows 10 (32 bits)</option>
+            <option value="windows1064">windows 10 (64 bits)</option>
+            <option value="windows8164">windows 8.1 (64 bits)</option>
+            <option value="windows8132">windows 8.1 (32 bits)</option>
+            <option value="windows864">windows 8 (64 bits)</option>
+            <option value="windows832">windows 8 (32 bits)</option>
+            <option value="windows764">windows 7 (64 bits)</option>
+            <option value="windows732">windows 7 (32 bits)</option>
         </select>
     </div>
 
     <div>
+        <input id="select-print" type="text" placeholder="Digite o modelo da impressora">
         <ul>
-            <li><button>Impressoras laser</button>
-                <ul><button>Brother</button>
-                    <li><a href="">HL-1212W</a></li>
-                    <li><a href="">DCP-L5652DN</a></li>
-                    <li><a href="">DCP-L2540DW</a></li>
+            <li>Impressoras laser
+                <ul>Brother
+                    <li><a id="link-item" href="#">HL-1202W</a></li>
+                    <li><a id="link-item" href="#">DCP-L5652DN</a></li>
+                    <li><a id="link-item" href="#">DCP-L2540DW</a></li>
                 </ul>
-                <ul><button>HP</button>
-                    <li>HP 400</li>
-                    <li>P1102w</li>
+                <ul>HP
+                    <li><a id="link-item" href="#">HP 400</a></li>
+                    <li><a id="link-item" href="#">1102w</a></li>
                 </ul>
             </li>
         </ul>
