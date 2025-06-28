@@ -11,10 +11,16 @@ function nextSequence() {
     console.log("sequencia atual", gamePattern);
     
 };
+function buttonAnimation(id) {
+    $(`#${id}`).fadeOut(100).fadeIn(100);
+}
+
 nextSequence();
 
-gamePattern.forEach(id => {
-    $(`#${id}`).click();
+gamePattern.forEach((id, index) => {
+    setTimeout(() => {
+        buttonAnimation(id);
+    }, index * 500);
 });
 
 
