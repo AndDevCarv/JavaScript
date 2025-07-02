@@ -7,9 +7,6 @@ function nextSequence() {
 
     gamePattern.push(randomChosenColour);
 
-    console.log("cor sorteada", randomChosenColour);
-    console.log("sequencia atual", gamePattern);
-    
 };
 function buttonAnimation(id) {
     $(`#${id}`).fadeOut(100).fadeIn(100);
@@ -23,4 +20,34 @@ gamePattern.forEach((id, index) => {
     }, index * 500);
 });
 
+const allButtons = document.querySelectorAll(".btn")
 
+allButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        let buttonValue = this.id
+        makeSound(buttonValue);
+    })
+})
+
+function makeSound(key) {
+    switch(key){
+        case 'red':
+            let red = new Audio("sounds/red.mp3");
+            red.play();
+            break;
+        case 'blue':
+            let blue = new Audio("sounds/blue.mp3");
+            blue.play();
+            break;
+        case 'yellow':
+            let yellow = new Audio("sounds/yellow.mp3");
+            yellow.play();
+            break;
+        case 'green':
+            let green = new Audio("sounds/green.mp3");
+            green.play();
+            break;
+        default:
+            break;
+    }
+}
