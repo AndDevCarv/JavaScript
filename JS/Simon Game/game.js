@@ -1,13 +1,16 @@
 const buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
+let userClickedPattern = [];
 
 function nextSequence() { 
     let randomNumber = Math.floor(Math.random() * 4);
     let randomChosenColour = buttonColours[randomNumber];
 
     gamePattern.push(randomChosenColour);
+    animatePress();
 
 };
+
 function buttonAnimation(id) {
     $(`#${id}`).fadeOut(100).fadeIn(100);
 }
@@ -21,33 +24,25 @@ gamePattern.forEach((id, index) => {
 });
 
 const allButtons = document.querySelectorAll(".btn")
-
 allButtons.forEach(button => {
     button.addEventListener("click", function () {
-        let buttonValue = this.id
-        makeSound(buttonValue);
+        let userChosenColor = this.id
+        userClickedPattern.push(userChosenColor);
+        makeSound(userChosenColor);
     })
 })
 
 function makeSound(key) {
-    switch(key){
-        case 'red':
-            let red = new Audio("sounds/red.mp3");
-            red.play();
-            break;
-        case 'blue':
-            let blue = new Audio("sounds/blue.mp3");
-            blue.play();
-            break;
-        case 'yellow':
-            let yellow = new Audio("sounds/yellow.mp3");
-            yellow.play();
-            break;
-        case 'green':
-            let green = new Audio("sounds/green.mp3");
-            green.play();
-            break;
-        default:
-            break;
-    }
+    let sound = new Audio("sounds/" + key + ".mp3");
+    sound.play();
+}
+
+function animatePress() {
+    $(".btn").click(function() {
+        let botao = $(this);
+        botao.addClass("pressed")
+        setTimeout(() => {
+            botao.removeClass("pressed");
+        }, 100);
+    });
 }
