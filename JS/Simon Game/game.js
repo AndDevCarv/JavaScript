@@ -2,7 +2,6 @@ const buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
 let userClickedPattern = [];
 let gameBegin = false;
-let defeat = false;
 let level = 0;
 
 
@@ -29,6 +28,22 @@ function nextSequence() {
     });
 };
 
+function checkAnswer(currentUserLevel) {
+    if (userClickedPattern[currentUserLevel] === gamePattern[currentUserLevel]) {
+        console.log("sucess");
+        
+        if (userClickedPattern.length === gamePattern.length) {
+            setTimeout(function() {
+                nextSequence();
+                userClickedPattern = [];
+            }, 1000);
+        }
+    else {
+        console.log("wrong");
+        }
+    }
+}
+
 function buttonAnimation(id) {
     $(`#${id}`).fadeOut(100).fadeIn(100);
 }
@@ -39,6 +54,7 @@ allButtons.forEach(button => {
         let userChosenColor = this.id
         userClickedPattern.push(userChosenColor);
         makeSound(userChosenColor);
+        checkAnswer(userClickedPattern.length - 1);
     })
 })
 
