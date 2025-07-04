@@ -4,7 +4,6 @@ let userClickedPattern = [];
 let gameBegin = false;
 let level = 0;
 
-
 function startGame() {
     $(document).one("keydown", function(){
         if (!gameBegin) {
@@ -20,12 +19,7 @@ function nextSequence() {
     let randomNumber = Math.floor(Math.random() * 4);
     let randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
-
-    gamePattern.forEach((id, index) => {
-    setTimeout(() => {
-        buttonAnimation(id);
-        }, index * 500);
-    });
+    buttonAnimation(randomChosenColour);
 };
 
 function checkAnswer(currentUserLevel) {
