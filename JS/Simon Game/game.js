@@ -1,27 +1,37 @@
 const buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
 let userClickedPattern = [];
+let gameBegin = false;
+let defeat = false;
+let level = 0;
 
-function nextSequence() { 
+
+function startGame() {
+    $(document).one("keydown", function(){
+        if (!gameBegin) {
+            gameBegin = true;
+            nextSequence();
+        }
+    })
+}
+
+function nextSequence() {
+    level++
+    $("#level-title").text("Level " + level);
     let randomNumber = Math.floor(Math.random() * 4);
     let randomChosenColour = buttonColours[randomNumber];
-
     gamePattern.push(randomChosenColour);
-    animatePress();
 
+    gamePattern.forEach((id, index) => {
+    setTimeout(() => {
+        buttonAnimation(id);
+        }, index * 500);
+    });
 };
 
 function buttonAnimation(id) {
     $(`#${id}`).fadeOut(100).fadeIn(100);
 }
-
-nextSequence();
-
-gamePattern.forEach((id, index) => {
-    setTimeout(() => {
-        buttonAnimation(id);
-    }, index * 500);
-});
 
 const allButtons = document.querySelectorAll(".btn")
 allButtons.forEach(button => {
@@ -46,3 +56,5 @@ function animatePress() {
         }, 100);
     });
 }
+animatePress();
+startGame();
