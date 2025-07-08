@@ -5,7 +5,7 @@ let gameBegin = false;
 let level = 0;
 
 function startGame() {
-    $(document).one("keydown", function(){
+    $(document).on("keydown", function(){
         if (!gameBegin) {
             gameBegin = true;
             nextSequence();
@@ -32,9 +32,11 @@ function checkAnswer(currentUserLevel) {
                 userClickedPattern = [];
             }, 1000);
         }
-    else {
-        console.log("wrong");
-        }
+    } else {
+        let wrong = new Audio("sounds/wrong.mp3");
+        wrong.play();
+        flashBody();
+        startOver();
     }
 }
 
@@ -65,6 +67,22 @@ function animatePress() {
             botao.removeClass("pressed");
         }, 100);
     });
+}
+
+function flashBody() {
+    $("body").addClass("game-over");
+    setTimeout(() => {
+        $("body").removeClass("game-over");
+    }, 200)
+}
+
+function startOver() {
+    level = 0;
+    gamePattern = [];
+    userClickedPattern = [];
+    gameBegin = false;
+
+    $("#level-title").text("Press A Key to Start");
 }
 animatePress();
 startGame();
