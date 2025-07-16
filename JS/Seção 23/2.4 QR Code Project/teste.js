@@ -1,6 +1,16 @@
+import inquirer from "inquirer";
 import qr from "qr-image";
- 
-var qr_svg = qr.image('I love QR!', { type: 'svg' });
-qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
- 
-var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
+import fs from "fs";
+
+const questions = [
+  {
+    type: 'input',
+    name: 'first_name',
+    message: "What's your first name",
+  },
+];
+
+inquirer.prompt(questions).then((answers) => {
+  console.log(answers.first_name);
+});
+
