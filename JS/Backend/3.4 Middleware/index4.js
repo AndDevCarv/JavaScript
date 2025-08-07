@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser"; //bodyparser é um middleware para traduzir o body codificado
 import { dirname } from "path"; //path é um modulo do node e dirname é uma ferramenta
-import { fileURLToPath } from "url"; //path é um modulo do node e fileUrlToPath é uma ferramenta
+import { fileURLToPath } from "url"; //url é um modulo do node e fileUrlToPath é uma ferramenta
 
 const __dirname = dirname(fileURLToPath(import.meta.url)); //aqui ele vai criar um caminho diretamente para a pasta atual ele vai transformar uma url codificada em um endereço de arquivos tipo C:public/teste.txt e pegar somente a pasta pra nós podermos manipular os arquivos tipo, minhaPasta(dirname) + arquivo (index.html)
 
