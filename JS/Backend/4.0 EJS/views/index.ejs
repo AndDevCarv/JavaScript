@@ -1,0 +1,13 @@
+<% 
+const hoje = new Date();
+const dia= hoje.getDay();
+let diaDaSemana = "";
+
+if (dia == 6 || dia == 7) {
+    diaDaSemana = "hoje é descanso";
+} else {
+    diaDaSemana = "hoje é serviço"
+}
+
+%>
+<p><%= diaDaSemana %></p>
