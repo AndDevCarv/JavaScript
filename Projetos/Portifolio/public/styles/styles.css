@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+li {
+    all: unset;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right ,#000000, #a1a4a8);
+    animation: gradientMove 25s ease infinite;
+    background-size: 200% 200%;
+    color: aliceblue;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
