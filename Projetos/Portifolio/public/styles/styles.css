@@ -1,17 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    padding: 5px;
-    font-size: 17px;
+
+*{
+box-sizing: border-box;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #28292c;
+}
+
 
 button {
     all: unset;
     cursor: pointer;
+}
+
+button:hover {
+    color: #000000;
+    transition: 0.2s ease-in-out;
+    
 }
 
 li {
@@ -19,16 +35,19 @@ li {
     font-size: 20px;
 }
 
+h1, h2 {
+    font-weight: 50;
+}
+
 body {
     margin: 0;
-    height: 100vh;
+    padding-top: 80px;
     background: linear-gradient(to right ,#000000, #a1a4a8);
-    animation: gradientMove 25s ease infinite;
-    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
+    background-size: 250% 250%;
     color: aliceblue;
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
 }
 
 @keyframes gradientMove {
@@ -43,3 +62,21 @@ body {
     }
 }
 
+.svg-white {
+    filter: brightness(0) saturate(100%) invert(100%);
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.logo {
+    padding-right: 30px;
+}
