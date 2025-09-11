@@ -5,6 +5,14 @@
 box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#readme, #template {
+    scroll-margin-top: 130px;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -19,12 +27,12 @@ header {
 }
 
 
-button {
+button, a {
     all: unset;
     cursor: pointer;
 }
 
-button:hover {
+button:hover, a:hover {
     color: #000000;
     transition: 0.2s ease-in-out;
     
@@ -81,20 +89,60 @@ body {
     padding-right: 30px;
 }
 
-.principal {
+.template {
     display: grid;
     grid-template-columns: 250px 1fr;
     place-items: center;
+    margin-bottom: 70px;
 }   
 
-.card-principal {
+.card-template {
     grid-column: span 2;
 }
 
-.card-principal > h1 {
+.card-template > h1 {
     font-size: 40px;
 }
 
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.principal > p {
+    font-weight: 300;
+    font-size: 35px;
+    width: 460px;
+    margin-left: 10em;
+} 
+
+.rack-image {
+    height: 450px;
+    border-radius: 7px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+    margin-left: 5em;
+}
+
+.readme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+}
+
+.readme > p {
+    font-size: 22px;
+    font-weight: 200;
+    width: 50%;
+    text-align: center;
+}
+
+
+
 footer {
     margin-top: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
