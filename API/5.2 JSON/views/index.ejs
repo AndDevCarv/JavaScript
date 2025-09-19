@@ -24,9 +24,13 @@
       <%} else {%>
       <h3>Ingredients:</h3>
       <ul id="ingredientsList">
-        <li><%=taco.protein.preparation%></li>
-        <li>Salsa name</li>
-        <li>Every other topping</li>
+        <li><%=taco.ingredients.protein.name%>, <%=taco.ingredients.protein.preparation%></li>
+        <li><%=taco.ingredients.salsa.name%></li>
+        <% taco.ingredients.toppings.forEach(function (topping) { %>
+          <li>
+          <%=topping.quantity%> of <%=topping.name%>
+          <li>
+        <% }) %>
       </ul>
       <% } %>
     </div>
