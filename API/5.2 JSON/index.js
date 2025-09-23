@@ -30,3 +30,4 @@ app.post("/recipe", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
+//os li tão bugado, ta retornando que o preparation é undefined, mas só falta isso msm
