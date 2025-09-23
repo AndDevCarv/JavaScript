@@ -35,6 +35,7 @@
     </form>
     <section id="cards" class="cards">
       <article class="card-item">
+        <% if (data){ %>
         <h2 class="card-activity">
           <%=data.activity%>
         </h2>
@@ -47,6 +48,20 @@
             <span class="card-number"></span>
           </span>
         </div>
+        <% } else { %>
+          <h2 class="card-activity">
+          <%=data.activity%>
+        </h2>
+        <div class="card-info">
+          <span class="card-type">
+            <%=data.type%>
+          </span>
+          <span class="card-participants">
+            participants: <%=data.participants%>
+            <span class="card-number"></span>
+          </span>
+        </div>
+        <% } %>
       </article>
 
 
