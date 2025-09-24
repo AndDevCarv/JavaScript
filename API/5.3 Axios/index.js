@@ -35,13 +35,15 @@ app.post("/", async (req, res) => {
     const finalResult = result[random];
 
     console.log(finalResult);
-    res.render("index.ejs", {data: finalResult});
-    
+    res.render("index.ejs", {data: finalResult || null, error: null});
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
+      data:null,
       error: error.message,
     });
+    console.log(error.message);
+    
   }
 });
 
