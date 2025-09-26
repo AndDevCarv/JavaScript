@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "2a588648bc33285d",
+    "type": "split",
+    "children": [
+      {
+        "id": "203d4e31a0cd9d5e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48d9acf2a141faa7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FrontEnd/Axios/Axios.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Axios"
+            }
+          },
+          {
+            "id": "7cebd930b775873e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FrontEnd/Axios/Autenticação de API com Axios.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Autenticação de API com Axios"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1959b0f35a7656f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "efa583b15e611326",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cce097814d41b74b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "d4d54450ec0cfc13",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "ab3f3344ec477b07",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "314630172ec398d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e426732558cb277",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec2f4a39f0f97379",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "FrontEnd/Axios/Autenticação de API com Axios.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Autenticação de API com Axios"
+            }
+          },
+          {
+            "id": "2bb23daa963bbeb8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "FrontEnd/Axios/Autenticação de API com Axios.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Autenticação de API com Axios"
+            }
+          },
+          {
+            "id": "b2fcf4af1adaa39f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "91cd1cd14fa63996",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "FrontEnd/Axios/Autenticação de API com Axios.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Autenticação de API com Axios"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "7cebd930b775873e",
+  "lastOpenFiles": [
+    "FrontEnd/Axios/Axios.md",
+    "FrontEnd/Axios/Autenticação de API com Axios.md",
+    "FrontEnd/Axios",
+    "FrontEnd/Promisses.md",
+    "URL.md",
+    "FrontEnd",
+    "create a link.md",
+    "Welcome.md"
+  ]
+}
