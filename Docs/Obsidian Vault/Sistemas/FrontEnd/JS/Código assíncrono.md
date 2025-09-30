@@ -1,6 +1,6 @@
 
 
-## **O que é código assíncrono**?****
+## **O que é código assíncrono**?
 
 O JavaScript foi idealizado como uma linguagem de programação síncrona. Isso quer dizer que, quando o código é executado, o JavaScript começa no início de um arquivo e executa linha por linha de código até chegar ao final.
 
