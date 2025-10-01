@@ -44,9 +44,6 @@ Authorization: Basic base64(usuario:senha)
 
 
 
-
-
-
 **Autenticação com API Key**
 
 📘 Como funciona
