@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
+                "file": "Sistemas/FrontEnd/API/Axios/Data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Autenticação de API com Axios"
+              "title": "Data"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemas/FrontEnd/API/REST/API REST Conceito.md",
+                "file": "Sistemas/FrontEnd/API/Axios/Data.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de API REST Conceito"
+              "title": "Sumário de Data"
             }
           }
         ],
@@ -172,21 +172,27 @@
   },
   "active": "215bcdfc6c55f8a7",
   "lastOpenFiles": [
+    "Sistemas/FrontEnd/API/Axios/Axios.md",
+    "Sistemas/FrontEnd/HTTP/Códigos de status.md",
+    "Sistemas/FrontEnd/API/API Conceito.md",
+    "Sistemas/FrontEnd/API/Axios/Data.md",
+    "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
+    "Sistemas/Engenharia de Software/Engenharia de requisitos/Conceitos e Princípios.md",
+    "Sistemas/FrontEnd/JS/Promisses.md",
+    "Sistemas/FrontEnd/HTTP",
+    "Sistemas/FrontEnd/JSON/Stringfy.md",
     "Sistemas/FrontEnd/JS/Try Catch.md",
+    "Sistemas/FrontEnd/JSON",
+    "Sistemas/FrontEnd/JS/Promisses 2.md",
+    "URL.md",
     "Sistemas/FrontEnd/JS/Código assíncrono.md",
     "Sistemas/FrontEnd/JS/Then Catch.md",
-    "Sistemas/FrontEnd/API/Axios/Axios.md",
-    "Sistemas/FrontEnd/JS/Promisses.md",
-    "Sistemas/FrontEnd/JS/Promisses 2.md",
     "Sistemas/FrontEnd/API/REST/API REST Conceito.md",
-    "Sistemas/FrontEnd/API/API Conceito.md",
-    "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
     "Sistemas/FrontEnd/API",
     "Sistemas/FrontEnd/API/REST",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Documento de requisitos de software.md",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Especificação e validação de requisitos.md",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Elicitação e Análise de requisitos.md",
-    "Sistemas/Engenharia de Software/Engenharia de requisitos/Conceitos e Princípios.md",
     "Sistemas/Img",
     "Sistemas/Img/Pasted image 20250929150957.png",
     "Sistemas/Git/Git e o versionamento.md",
@@ -195,10 +201,7 @@
     "Sistemas/Engenharia de Software/Engenharia de requisitos",
     "Sistemas/Engenharia de Software",
     "Sistemas/Git",
-    "URL.md",
     "Sistemas/Algoritmos",
-    "Sistemas",
-    "Sistemas/FrontEnd/API/Axios",
     "create a link.md",
     "Welcome.md"
   ]

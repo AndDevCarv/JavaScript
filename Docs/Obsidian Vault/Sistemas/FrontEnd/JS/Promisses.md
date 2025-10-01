@@ -77,6 +77,6 @@ async function getData() {
 getData().then(res => console.log(res)).catch(err => console.log(err); 
 ```
 
-Isso expõe outro fato interessante sobre async/await. Ao definir uma função como async, _ela sempre retornará uma _promise.__
+Isso expõe outro fato interessante sobre async/await. Ao definir uma função como async, _ela sempre retornará uma promise.
 
 Usar async/await pode parecer um pouco com magia de início. Porém, como ocorre com qualquer outro truque de mágica, eles são apenas uma tecnologia avançada o suficiente e que evoluiu com o passar dos anos.
