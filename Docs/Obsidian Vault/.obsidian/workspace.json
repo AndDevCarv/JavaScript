@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/FrontEnd/API/Axios/Data.md",
+                "file": "Sistemas/FrontEnd/API/Axios/Métodos/Data.md",
                 "mode": "source",
                 "source": false
               },
@@ -170,12 +170,24 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "215bcdfc6c55f8a7",
+  "active": "cce097814d41b74b",
   "lastOpenFiles": [
-    "Sistemas/FrontEnd/API/Axios/Axios.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Configuração.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Axios patch.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Axios put.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Axios get.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Axios post.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Axios delete.md",
+    "Sistemas/FrontEnd/API/Axios/Axios delete.md",
+    "Sistemas/FrontEnd/API/Axios/Axios get.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos",
+    "Sistemas/FrontEnd/API/Axios/Axios patch.md",
+    "Sistemas/FrontEnd/API/Axios/Axios put.md",
+    "Sistemas/FrontEnd/API/Axios/Axios post.md",
     "Sistemas/FrontEnd/HTTP/Códigos de status.md",
+    "Sistemas/FrontEnd/API/Axios/Métodos/Data.md",
+    "Sistemas/FrontEnd/API/Axios/Axios.md",
     "Sistemas/FrontEnd/API/API Conceito.md",
-    "Sistemas/FrontEnd/API/Axios/Data.md",
     "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Conceitos e Princípios.md",
     "Sistemas/FrontEnd/JS/Promisses.md",
@@ -191,18 +203,11 @@
     "Sistemas/FrontEnd/API",
     "Sistemas/FrontEnd/API/REST",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Documento de requisitos de software.md",
-    "Sistemas/Engenharia de Software/Engenharia de requisitos/Especificação e validação de requisitos.md",
-    "Sistemas/Engenharia de Software/Engenharia de requisitos/Elicitação e Análise de requisitos.md",
     "Sistemas/Img",
     "Sistemas/Img/Pasted image 20250929150957.png",
-    "Sistemas/Git/Git e o versionamento.md",
     "Sistemas/FrontEnd/JS",
-    "Sistemas/Git/Branches.md",
     "Sistemas/Engenharia de Software/Engenharia de requisitos",
     "Sistemas/Engenharia de Software",
-    "Sistemas/Git",
-    "Sistemas/Algoritmos",
-    "create a link.md",
-    "Welcome.md"
+    "Sistemas/Git"
   ]
 }
