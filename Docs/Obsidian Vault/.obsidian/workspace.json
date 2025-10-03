@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/FrontEnd/JS/Promisses.md",
+                "file": "Sistemas/FrontEnd/JS/Pegando item aleatório em array.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Promisses"
+              "title": "Pegando item aleatório em array"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 330.5
   },
   "right": {
     "id": "314630172ec398d1",
@@ -172,6 +172,11 @@
   },
   "active": "215bcdfc6c55f8a7",
   "lastOpenFiles": [
+    "Sistemas/FrontEnd/API/REST/API REST Conceito.md",
+    "Sistemas/FrontEnd/JS/Pegando item aleatório em array.md",
+    "Sistemas/FrontEnd/API/API Conceito.md",
+    "Sistemas/FrontEnd/API/REST/O que torna uma API REST.md",
+    "Sistemas/FrontEnd/JS/Promisses.md",
     "Sistemas/FrontEnd/API/Axios/Métodos/Axios get.md",
     "Sistemas/Backend/Express/Express.md",
     "Sistemas/Backend/Express/Axios e Express.md",
@@ -192,17 +197,12 @@
     "Sistemas/FrontEnd/API/Axios/Axios put.md",
     "Sistemas/FrontEnd/API/Axios/Axios post.md",
     "Sistemas/FrontEnd/HTTP/Códigos de status.md",
-    "Sistemas/FrontEnd/API/API Conceito.md",
     "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Conceitos e Princípios.md",
-    "Sistemas/FrontEnd/JS/Promisses.md",
     "Sistemas/FrontEnd/HTTP",
     "Sistemas/FrontEnd/JSON/Stringfy.md",
     "Sistemas/FrontEnd/JS/Try Catch.md",
     "Sistemas/FrontEnd/JSON",
-    "Sistemas/FrontEnd/JS/Promisses 2.md",
-    "Sistemas/FrontEnd/JS/Código assíncrono.md",
-    "Sistemas/FrontEnd/JS/Then Catch.md",
     "Sistemas/FrontEnd/API",
     "Sistemas/FrontEnd/API/REST",
     "Sistemas/Img",
