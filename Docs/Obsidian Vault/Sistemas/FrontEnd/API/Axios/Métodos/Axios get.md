@@ -20,3 +20,21 @@ app.post("/get-secret", async (req, res) => {
 
 });
 ```
+
+Pra pegar um dado específico do objeto que o axios retorna é assim: 
+
+```js
+app.get("/", (req, res) => {
+
+    try {
+
+        const result = axios.get(API_URL);
+
+        const response = result.data.dadoEspecifico
+
+    } catch (error) {
+
+    }
+
+})
+```
