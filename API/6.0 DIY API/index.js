@@ -603,8 +603,29 @@ app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
 
-app.get("/", (req, res) => {
-  console.log(randomJoke);
-  
+app.get("/random", (req, res) => {
+  res.send(randomJoke);
 })
 
+app.get("/jokes/:id", (req, res) => {
+  const searchId = parseInt(req.params.id)
+  const searchJoke = jokes.find((joke) => joke.id === searchId);
+  res.send(searchJoke)
+})
+
+app.get("/filter", (req, res) => {
+  const searchType = req.query.type;
+  const searchJoke = jokes.find((joke) => joke.jokeType === searchType);
+  res.send(searchJoke);
+})
+
+app.post("/jokes", (req, res) => {
+  const {text, type} = req.body
+  const newJoke = {
+    id: jokes.length + 1,
+    jokeText: text,
+    jokeType: type,
+  }
+  jokes.push(newJoke);
+  res.send(newJoke);
+})
