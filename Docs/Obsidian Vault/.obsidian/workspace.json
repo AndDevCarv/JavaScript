@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/Backend/Express/Sem título.md",
+                "file": "Sistemas/Backend/Express/GET com query string.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sem título"
+              "title": "GET com query string"
             }
           }
         ]
@@ -172,8 +172,9 @@
   },
   "active": "215bcdfc6c55f8a7",
   "lastOpenFiles": [
+    "Sistemas/Backend/Express/Rota com filtro por tipo.md",
+    "Sistemas/Backend/Express/GET com query string.md",
     "Sistemas/FrontEnd/JS/Pegando item aleatório em array.md",
-    "Sistemas/Backend/Express/Sem título.md",
     "Sistemas/FrontEnd/API/REST/API REST Conceito.md",
     "Sistemas/FrontEnd/API/API Conceito.md",
     "Sistemas/FrontEnd/API/REST/O que torna uma API REST.md",
@@ -201,7 +202,6 @@
     "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
     "Sistemas/Engenharia de Software/Engenharia de requisitos/Conceitos e Princípios.md",
     "Sistemas/FrontEnd/HTTP",
-    "Sistemas/FrontEnd/JSON/Stringfy.md",
     "Sistemas/FrontEnd/JSON",
     "Sistemas/FrontEnd/API",
     "Sistemas/FrontEnd/API/REST",
