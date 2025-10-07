@@ -11,7 +11,7 @@
 //6. PATCH a joke
 
 //7. DELETE Specific joke
-
+ 
 //8. DELETE All jokes
 
 
@@ -628,4 +628,48 @@ app.post("/jokes", (req, res) => {
   }
   jokes.push(newJoke);
   res.send(newJoke);
+})
+
+app.put("/jokes/:id", (req, res) => {
+  const searchId = parseInt(req.params.id);
+  const searchJoke = jokes.findIndex((joke) => joke.id === searchId);
+  const {text, type} = req.body;
+
+  const newJoke = {
+    id: searchId,
+    jokeText: text,
+    jokeType: type,
+  };
+  jokes[searchJoke] = newJoke;
+
+  res.send(jokes[searchJoke]);
+})
+
+app.patch("/jokes/:id", (req, res) => {
+  const searchId = parseInt(req.params.id);
+  const searchJoke = jokes.find((joke) => joke.id === searchId);
+  const searchIndex = jokes.findIndex((jokes) => jokes.id === searchId);
+  const {text, type} = req.body;
+
+  const newJoke = {
+    id: searchId,
+    jokeText: text || searchJoke.jokeText,
+    jokeType: type || searchJoke.jokeType,
+  };
+
+  jokes[searchIndex] = newJoke;
+  res.send(jokes[searchIndex]);
+})
+
+app.delete("/jokes/:id", (req, res) => {
+  const searchId = parseInt(req.params.id);
+  const searchIndex = jokes.findIndex((joke) => joke.id === searchId);
+
+  jokes.splice(searchIndex, 1);
+  res.send(`mensagem: piada ${searchId} removida`)
+})
+
+app.delete("/all", (req, res) => {
+  jokes.splice(0);
+  res.send(`message: deleted all`)
 })
