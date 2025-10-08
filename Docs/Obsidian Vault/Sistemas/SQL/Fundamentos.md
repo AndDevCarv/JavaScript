@@ -1,0 +1,8 @@
+Nos bancos de dados SQL, o modelo relacional serve como base conceitual, organizando os dados em tabelas estruturadas e interconectadas. Os bancos de dados SQL são compostos de esquemas e tabelas:
+
+- **Esquema:** define a estrutura do banco de dados, incluindo tabelas, seus campos, tipos de dados, valores disponíveis e relacionamentos.
+- **Tabelas:** As unidades fundamentais de um banco de dados, representando entidades (por exemplo, informações sobre clientes, produtos ou transações), com linhas contendo registros individuais para cada entidade (por exemplo, um cliente específico) e colunas armazenando atributos específicos sobre a entidade (por exemplo, o nome ou o e-mail do cliente).
+
+O modelo relacional reforça a consistência por meio de dois tipos de chaves: (1) chaves primárias que identificam exclusivamente cada registro e (2) chaves estrangeiras que estabelecem relacionamentos entre tabelas. Você pode saber mais sobre bancos de dados relacionais em nosso [curso Introdução ao SQL](https://www.datacamp.com/pt/courses/introduction-to-sql%5C).
+
+A SQL, ou Structured Query Language (Linguagem de Consulta Estruturada), serve como interface para gerenciar esses bancos de dados, permitindo a criação, recuperação, atualização e exclusão de dados por meio de comandos padronizados. Você pode ver uma lista desses comandos e dos recursos do SQL em nossa [Folha de dicas básicas do SQL](https://www.datacamp.com/pt/cheat-sheet/sql-basics-cheat-sheet). Esse modelo e seus componentes oferecem uma estrutura avançada e flexível para organizar e consultar dados de forma a garantir a integridade e a coerência em todo o banco de dados.

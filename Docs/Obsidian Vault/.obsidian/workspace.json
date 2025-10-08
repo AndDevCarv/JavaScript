@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/Backend/Express/GET com query string.md",
+                "file": "Sistemas/SQL/Fundamentos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GET com query string"
+              "title": "Fundamentos"
+            }
+          },
+          {
+            "id": "6915f2ad4e9f042f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas/SQL/Fundamentos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fundamentos"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,11 +185,14 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "215bcdfc6c55f8a7",
+  "active": "6915f2ad4e9f042f",
   "lastOpenFiles": [
+    "Sistemas/SQL/SQL vs NoSQL.md",
+    "Sistemas/SQL/Fundamentos.md",
+    "Sistemas/Backend/Express/GET com query string.md",
+    "Sistemas/SQL",
     "Sistemas/Backend/Express/Rota com filtro por tipo.md",
     "Sistemas/FrontEnd/API/Axios/Métodos/Data.md",
-    "Sistemas/Backend/Express/GET com query string.md",
     "Sistemas/Backend/Express/Axios e Express.md",
     "Sistemas/Backend/Express/Express.md",
     "Sistemas/FrontEnd/API/Axios/Métodos/Axios put.md",
@@ -199,15 +217,12 @@
     "Sistemas/FrontEnd/API/Axios/Axios put.md",
     "Sistemas/FrontEnd/API/Axios/Axios post.md",
     "Sistemas/FrontEnd/HTTP/Códigos de status.md",
-    "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
-    "Sistemas/Engenharia de Software/Engenharia de requisitos/Conceitos e Princípios.md",
     "Sistemas/FrontEnd/HTTP",
     "Sistemas/FrontEnd/JSON",
     "Sistemas/FrontEnd/API",
     "Sistemas/FrontEnd/API/REST",
     "Sistemas/Img",
     "Sistemas/Img/Pasted image 20250929150957.png",
-    "Sistemas/FrontEnd/JS",
-    "Sistemas/Engenharia de Software/Engenharia de requisitos"
+    "Sistemas/FrontEnd/JS"
   ]
 }
