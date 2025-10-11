@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/SQL/Acessando o Postgres com JS.md",
-                "mode": "source",
+                "file": "Sistemas/SQL/Tipos de dados.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Acessando o Postgres com JS"
+              "title": "Tipos de dados"
             }
           }
         ],
@@ -187,8 +187,10 @@
   },
   "active": "6915f2ad4e9f042f",
   "lastOpenFiles": [
-    "Sistemas/SQL/Fundamentos.md",
+    "Sistemas/SQL/Tipo Serial vs Generated.md",
+    "Sistemas/SQL/Tipos de dados.md",
     "Sistemas/SQL/Acessando o Postgres com JS.md",
+    "Sistemas/SQL/Fundamentos.md",
     "Sistemas/SQL/SQL vs NoSQL.md",
     "Sistemas/Backend/Express/GET com query string.md",
     "Sistemas/SQL",
@@ -215,8 +217,6 @@
     "Sistemas/FrontEnd/API/Axios/Axios get.md",
     "Sistemas/FrontEnd/API/Axios/Métodos",
     "Sistemas/FrontEnd/API/Axios/Axios patch.md",
-    "Sistemas/FrontEnd/API/Axios/Axios put.md",
-    "Sistemas/FrontEnd/API/Axios/Axios post.md",
     "Sistemas/FrontEnd/HTTP",
     "Sistemas/FrontEnd/JSON",
     "Sistemas/FrontEnd/API",

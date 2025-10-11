@@ -5,7 +5,7 @@ import pg from "pg";
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
-  database: "flags",
+  database: "world",
   password: "solito2003",
   port: 5432
 });
@@ -14,11 +14,11 @@ db.connect();
 
 let quiz = []
 
-db.query("SELECT * FROM flags", (err, res) => {
+db.query("SELECT * FROM public.flags", (err, res) => {
   if (err) {
     console.log("Error executing query" + err.stack);
   } else {
-    quiz.res.rows;
+    quiz = res.rows;
   }
 });
 
@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 app.post("/submit", (req, res) => {
   let answer = req.body.answer.trim();
   let isCorrect = false;
-  if (currentQuestion.capital.toLowerCase() === answer.toLowerCase()) {
+  if (currentQuestion.name.toLowerCase() === answer.toLowerCase()) {
     totalCorrect++;
     console.log(totalCorrect);
     isCorrect = true;
