@@ -18,31 +18,32 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-let total = 0
-
-db.query("SELECT COUNT(*) FROM visited_countries", (err, res) => {
-  if (err) {
-    console.log(`Error executing query ${err.stack}`);
-  } else {
-    total = parseInt(res.rows[0].count)
-  }
-})
 
 app.get("/", async (req, res) => {
   try {
-    const total_number_countries = await db.query("SELECT COUNT(*) FROM visited_countries");
-    const countries_id = await db.query("SELECT country_code FROM visited_countries");
+    const totalNumberCountries = await db.query("SELECT COUNT(*) FROM visited_countries");
+    const countriesResult = await db.query("SELECT country_code FROM visited_countries");
+    const countries = countriesResult.rows.map(element => element.country_code)
 
-    const countries = parseInt(total_number_countries.rows[0].count);
-    const total = parseInt(countries_id.rows[0].count);
-
-    
-    res.render("index.ejs", {})
+    const total = parseInt(totalNumberCountries.rows[0].count);
+    res.render("index.ejs", {total: total, countries: countries})
   } catch (error) {
-    console.log(`Error on querys ${error}`);
+    console.log(`Error on query ${error}`);
+  }
+});
+
+app.post("/add", async (req, res) => {
+  try {
+    const country = req.body.country;
+    const result = await db.query("SELECT country_code FROM countries WHERE country_name ILIKE $1", [country]);
+
+    console.log(result);
+    
+  } catch (error) {
+    console.log(`Error in query ${error}`);
   }
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port} ${total}`);
+  console.log(`Server running on http://localhost:${port}`);
 });
