@@ -36,9 +36,11 @@ app.post("/add", async (req, res) => {
   try {
     const country = req.body.country;
     const result = await db.query("SELECT country_code FROM countries WHERE country_name ILIKE $1", [country]);
-
-    console.log(result);
+    const refinedResult = result.rows[0].country_code;
     
+    await db.query("INSERT INTO visited_countries (country_code) VALUES ($1)", [refinedResult]);
+    
+    res.redirect("/");
   } catch (error) {
     console.log(`Error in query ${error}`);
   }
