@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas/SQL/Retorno de querys e filtragem de resultados.md",
+                "file": "Sistemas/Engenharia de Software/Padrões de Projetos/MVC/Padrão base.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Retorno de querys e filtragem de resultados"
+              "title": "Padrão base"
             }
           }
         ]
@@ -172,9 +172,12 @@
   },
   "active": "af2fd12e7698de73",
   "lastOpenFiles": [
-    "Sistemas/FrontEnd/JS/map().md",
     "Sistemas/SQL/Tipos de dados.md",
+    "Sistemas/Engenharia de Software/Padrões de Projetos/MVC/Padrão base.md",
+    "Sistemas/Engenharia de Software/Padrões de Projetos/MVC",
+    "Sistemas/Engenharia de Software/Padrões de Projetos",
     "Sistemas/SQL/Retorno de querys e filtragem de resultados.md",
+    "Sistemas/FrontEnd/JS/map().md",
     "Sistemas/FrontEnd/API/Axios/Axios.md",
     "Sistemas/SQL/Fundamentos.md",
     "Sistemas/FrontEnd/API/Axios/Autenticação de API com Axios.md",
@@ -200,14 +203,11 @@
     "Sistemas/Backend/Express",
     "Sistemas/Backend",
     "URL.md",
-    "Sistemas/FrontEnd/API/Axios/Métodos/Configuração.md",
     "Sistemas/FrontEnd/API/Axios/Métodos",
     "Sistemas/FrontEnd/HTTP",
     "Sistemas/FrontEnd/JSON",
     "Sistemas/FrontEnd/API",
     "Sistemas/FrontEnd/API/REST",
-    "Sistemas/Img",
-    "Sistemas/Img/Pasted image 20250929150957.png",
-    "Sistemas/FrontEnd/JS"
+    "Sistemas/Img/Pasted image 20250929150957.png"
   ]
 }
